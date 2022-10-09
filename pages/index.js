@@ -112,9 +112,9 @@ export default function Home() {
         <link rel="icon" href="/icon.ico" />
       </Head>
 
-      <main className='px-10 md:px-20 lg:px-40 dark:bg-gray-900'>
+      <main className='px-5 md:px-20 lg:px-40 dark:bg-gray-900'>
         <section className='min-h-screen'>
-          <nav className='py-10 mb-12 flex justify-between'>
+          <nav className='py-10 mb-12 flex justify-between gap-4'>
             <h1 className=' text-xl font-AstroSpace dark:text-white'>developedBySri</h1>
             <ul className='flex items-center'>
               <li><VscColorMode onClick={() => setDarkMode(!darkMode)} className=' cursor-pointer text-2xl dark:fill-white' /></li>
@@ -418,11 +418,11 @@ export default function Home() {
           </div>
         </section>
         <section>
-          <div className='text-center p-20'>
-            <h2 className='text-xl dark:text-white'>{"Contact:"}</h2>
-            <div className='flex flex-wrap mx-auto'>
-            <a className='text-xl dark:text-white px-20'  data-toggle="tooltip" title={'Copy'} onClick={() =>  {navigator.clipboard.writeText('nivas65536@gmail.com'); notify("info", "Copied")}}>{"Gmail: nivas65536@gmail.com"}</a>
-            <a className='text-xl dark:text-white px-20'  data-toggle="tooltip" title={'Copy'} onClick={() =>  {navigator.clipboard.writeText('8754698456'); notify("info", "Copied")}}>{"Phone No. : 8754698456"}</a>
+          <div className='mx-auto pt-10'>
+            <div className='flex flex-wrap'>
+            <h2 className='text-xl  dark:text-white px-10'>{"Contact:"}</h2>
+            <a className='text-xl   dark:text-white px-10'  data-toggle="tooltip" title={'Copy'} onClick={() =>  {navigator.clipboard.writeText('nivas65536@gmail.com'); notify("info", "Copied")}}>{"Gmail: nivas65536@gmail.com"}</a>
+            <a className='text-xl   dark:text-white px-10'  data-toggle="tooltip" title={'Copy'} onClick={() =>  {navigator.clipboard.writeText('8754698456'); notify("info", "Copied")}}>{"Phone No. : 8754698456"}</a>
             </div>
           </div>
           <div className='text-center p-20'>
