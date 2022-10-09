@@ -141,10 +141,10 @@ export default function Home() {
             <div className='mx-auto p-10'>
               <h3 className='text-2xl py-1 text-center  text-teal-600 font-medium dark:text-violet-600'>About Me</h3>
               <p className='text-md py-5 leading-8 text-gray-800 md:text-xl dark:text-violet-400'>
-                {"I'm a software developer(Frontend) & been part of quality assurance team at Verizon for past 2 years. Developed various dashboards for showcasing processed test case, user stories and defect data in various formats.I like to learn new upcoming technologies, have done few personal projects based on Etherium (Hyperleger) & IPFS, Socket.io.And I'm bit of a enthusiast when it comes to security stuffs, have a some knowledge in tools like Metasploit, Burpsuite & basic penetesting techniques."}
+                {"I'm a software developer(Frontend) & been part of quality assurance team at Verizon for past 2 years. Developed various dashboards for showcasing processed test case, user stories and defect data in various formats.I like to learn new upcoming technologies, have done few personal projects based on Etherium (Hyperleger) & IPFS, Socket.io.And I'm bit of a enthusiast when it comes to security stuffs, have some experience with tools like Metasploit, Burpsuite & basic pentesting techniques."}
                 </p>
                 <p className='text-md py-5 leading-8 text-gray-800 md:text-xl dark:text-violet-400'>
-                {"I like to learn to draw and i do like to experiment with the approaches. I even sold a NFT in polygon blockchain. I have added some of my works below from pixel art to stippling art. I like to watch animes, movies, series and big addict to Kowsa/Atho (Burmese food)."}
+                {"I like to draw and like to experiment with the approaches. I even sold a NFT in polygon blockchain. I have added some of my works below from pixel art to stippling art. I like to watch animes, movies, series and big addict to Kowsa/Atho (Burmese food)."}
               </p>
             </div>
             <div className='flex flex-col bg-slate-100 lg:flex-row'>
