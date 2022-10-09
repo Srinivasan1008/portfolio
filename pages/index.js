@@ -100,7 +100,7 @@ import movieArt14 from '../public/images/MovieArt/movieArt14.jpg';
 
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const notify = React.useCallback((type, message) => {
     toast({ type, message });
   }, []);
