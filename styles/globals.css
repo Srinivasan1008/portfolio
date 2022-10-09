@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -15,12 +19,22 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+@font-face {
+  font-family: "AstroSpace";
+  src: url('../public/AstroSpace-0Wl3o.otf');
 }
+
+
+.carousel .control-dots {
+  display: none;
+}
+
+.carousel .control-prev.control-arrow:before {
+  border-right: 8px solid rgb(0 0 0);
+}
+
+.carousel .control-next.control-arrow:before {
+  border-left: 8px solid rgb(0 0 0);
+}
+
+

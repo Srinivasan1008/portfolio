@@ -1,69 +1,437 @@
 import Head from 'next/head'
+import { VscColorMode } from 'react-icons/vsc'
+import { AiFillTwitterCircle, AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
+import { FaInstagramSquare } from 'react-icons/fa'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import profilePic from '../public/profilePic.png'
+import { useState } from 'react'
+import React, { Component } from 'react';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
+import toast from "../components/Toast";
+
+
+import portrait1 from '../public/images/portraits/portrait1.png';
+import portrait2 from '../public/images/portraits/portrait2.jpg';
+import portrait3 from '../public/images/portraits/portrait3.jpg';
+import portrait6 from '../public/images/portraits/portrait6.jpg';
+import portrait7 from '../public/images/portraits/portrait7.jpg';
+import portrait8 from '../public/images/portraits/portrait8.jpg';
+
+import pixelArt1 from '../public/images/pixelArt/pixelArt1.png';
+import pixelArt2 from '../public/images/pixelArt/pixelArt2.png';
+import pixelArt3 from '../public/images/pixelArt/pixelArt3.png';
+import pixelArt4 from '../public/images/pixelArt/pixelArt4.png';
+import pixelArt5 from '../public/images/pixelArt/pixelArt5.png';
+import pixelArt6 from '../public/images/pixelArt/pixelArt6.png';
+import pixelArt7 from '../public/images/pixelArt/pixelArt7.jpg';
+
+import sketch1 from '../public/images/Sketching/sketch1.jpg';
+import sketch2 from '../public/images/Sketching/sketch2.jpg';
+
+import stipplingArt1 from '../public/images/StipplingArt/stipplingArt1.jpg';
+import stipplingArt2 from '../public/images/StipplingArt/stipplingArt2.jpg';
+import stipplingArt3 from '../public/images/StipplingArt/stipplingArt3.jpg';
+import stipplingArt4 from '../public/images/StipplingArt/stipplingArt4.jpg';
+import stipplingArt5 from '../public/images/StipplingArt/stipplingArt5.jpg';
+
+import origami1 from '../public/images/origami/origami1.jpg';
+import origami2 from '../public/images/origami/origami2.png';
+import origami3 from '../public/images/origami/origami3.jpg';
+import origami4 from '../public/images/origami/origami4.jpg';
+import origami5 from '../public/images/origami/origami5.jpg';
+import origami6 from '../public/images/origami/origami6.jpg';
+import origami7 from '../public/images/origami/origami7.jpg';
+import origami8 from '../public/images/origami/origami8.jpg';
+import origami9 from '../public/images/origami/origami9.jpg';
+import origami10 from '../public/images/origami/origami10.jpg';
+import origami11 from '../public/images/origami/origami11.jpg';
+import origami12 from '../public/images/origami/origami12.jpg';
+import origami13 from '../public/images/origami/origami13.jpg';
+import origami14 from '../public/images/origami/origami14.jpg';
+import origami15 from '../public/images/origami/origami15.jpg';
+import origami16 from '../public/images/origami/origami16.jpg';
+import origami17 from '../public/images/origami/origami17.jpg';
+import origami18 from '../public/images/origami/origami18.jpg';
+import origami19 from '../public/images/origami/origami19.jpg';
+import origami20 from '../public/images/origami/origami20.jpg';
+import origami21 from '../public/images/origami/origami21.jpg';
+import origami22 from '../public/images/origami/origami22.jpg';
+import origami23 from '../public/images/origami/origami23.jpg';
+import origami24 from '../public/images/origami/origami24.jpg';
+import origami25 from '../public/images/origami/origami25.jpg';
+import origami26 from '../public/images/origami/origami26.png';
+import origami27 from '../public/images/origami/origami27.png';
+import origami28 from '../public/images/origami/origami28.png';
+
+import ballPenArt1 from '../public/images/ballPenArt/ballPenArt1.jpg';
+import ballPenArt2 from '../public/images/ballPenArt/ballPenArt2.jpg';
+import ballPenArt3 from '../public/images/ballPenArt/ballPenArt3.jpg';
+import ballPenArt4 from '../public/images/ballPenArt/ballPenArt4.jpg';
+import ballPenArt5 from '../public/images/ballPenArt/ballPenArt5.jpg';
+import ballPenArt6 from '../public/images/ballPenArt/ballPenArt6.jpg';
+import ballPenArt7 from '../public/images/ballPenArt/ballPenArt7.jpg';
+import ballPenArt8 from '../public/images/ballPenArt/ballPenArt8.jpg';
+import ballPenArt9 from '../public/images/ballPenArt/ballPenArt9.jpg';
+import ballPenArt10 from '../public/images/ballPenArt/ballPenArt10.jpg';
+import ballPenArt11 from '../public/images/ballPenArt/ballPenArt11.jpg';
+import ballPenArt12 from '../public/images/ballPenArt/ballPenArt12.jpg';
+import ballPenArt13 from '../public/images/ballPenArt/ballPenArt13.jpg';
+import ballPenArt14 from '../public/images/ballPenArt/ballPenArt14.jpg';
+import ballPenArt15 from '../public/images/ballPenArt/ballPenArt15.jpg';
+import ballPenArt16 from '../public/images/ballPenArt/ballPenArt16.jpg';
+
+import movieArt1 from '../public/images/MovieArt/movieArt1.jpg';
+import movieArt2 from '../public/images/MovieArt/movieArt2.png';
+import movieArt3 from '../public/images/MovieArt/movieArt3.png';
+import movieArt4 from '../public/images/MovieArt/movieArt4.jpg';
+import movieArt5 from '../public/images/MovieArt/movieArt5.png';
+import movieArt6 from '../public/images/MovieArt/movieArt6.jpg';
+import movieArt7 from '../public/images/MovieArt/movieArt7.png';
+import movieArt8 from '../public/images/MovieArt/movieArt8.jpg';
+import movieArt9 from '../public/images/MovieArt/movieArt9.png';
+import movieArt10 from '../public/images/MovieArt/movieArt10.jpg';
+import movieArt11 from '../public/images/MovieArt/movieArt11.png';
+import movieArt12 from '../public/images/MovieArt/movieArt12.jpg';
+import movieArt13 from '../public/images/MovieArt/movieArt13.jpg';
+import movieArt14 from '../public/images/MovieArt/movieArt14.jpg';
+
+
+
 
 export default function Home() {
+  const [darkMode, setDarkMode] = useState(false);
+  const notify = React.useCallback((type, message) => {
+    toast({ type, message });
+  }, []);
   return (
-    <div className={styles.container}>
+    <div className={darkMode ? 'dark' : ''}>
       <Head>
-        <title>Create Next App</title>
+        <title>Portfolio</title>
         <meta name="description" content="Generated by create next app" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/icon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+      <main className='px-10 md:px-20 lg:px-40 dark:bg-gray-900'>
+        <section className='min-h-screen'>
+          <nav className='py-10 mb-12 flex justify-between'>
+            <h1 className=' text-xl font-AstroSpace dark:text-white'>developedBySri</h1>
+            <ul className='flex items-center'>
+              <li><VscColorMode onClick={() => setDarkMode(!darkMode)} className=' cursor-pointer text-2xl dark:fill-white' /></li>
+              <li><a className=' bg-gradient-to-r from-teal-400 to-violet-400 text-black px-4 py-2 rounded-md ml-8' href='assets/Srinivasan_Resume_Offcial.pdf' download>Resume</a></li>
+            </ul>
+          </nav>
+          <div className='text-center p-10 md:text-6xl'>
+            <h2 className='text-5xl py-2 text-teal-600 font-medium dark:text-violet-600'>Srinivasan Venkatesan</h2>
+            <h3 className=' text-2xl py-2 md:text-3xl dark:text-white'>Software Developer & Digital Artist</h3>
+            <p className='text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto dark:text-violet-400'>A software developer with 2 years of experience in frontend development (ReactJS) & a budding digital artist.</p>
+          </div>
+          <div className=' text-5xl flex justify-center gap-16 py-3 text-gray-600'>
+            <a href='https://www.linkedin.com/in/srinivasan-v-9a08157a/' target="_blank" rel="noopener noreferrer"><AiFillLinkedin className=' dark:fill-gray-300' /></a>
+            <a href='https://github.com/Srinivasan1008' target="_blank" rel="noopener noreferrer"><AiFillGithub className=' dark:fill-gray-300' /></a>
+            <a href='https://twitter.com/Srinivas_1008' target="_blank" rel="noopener noreferrer"><AiFillTwitterCircle className=' dark:fill-gray-300' /></a>
+            <a href='https://www.instagram.com/srinivas_dante/' target="_blank" rel="noopener noreferrer"><FaInstagramSquare className=' dark:fill-gray-300' /></a>
+          </div>
+          <div className='relative mx-auto rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96'>
+            <Image src={profilePic} layout='fill' objectFit='cover' />
+          </div>
+        </section>
+        <section>
+          <div>
+            <div className='mx-auto p-10'>
+              <h3 className='text-2xl py-1 text-center  text-teal-600 font-medium dark:text-violet-600'>About Me</h3>
+              <p className='text-md py-5 leading-8 text-gray-800 md:text-xl dark:text-violet-400'>
+                I'm a software developer(Frontend) & been part of quality assurance team at Verizon for past 2 years. Developed various dashboards for showcasing processed test case, user stories and defect data in various formats.
+                I like to learn new upcoming technologies, have done few personal projects based on Etherium (Hyperleger) & IPFS, Socket.io.
+                And I'm bit of a enthusiast when it comes to security stuffs, have a some knowledge in tools like Metasploit, Burpsuite & basic penetesting techniques.
+                </p>
+                <p className='text-md py-5 leading-8 text-gray-800 md:text-xl dark:text-violet-400'>
+                I like to learn to draw and i do like to experiment with the approaches. I even sold a NFT in polygon blockchain. I have added some of my works below from pixel art to stippling art. I like to watch animes, movies, series and big addict to Kowsa/Atho (Burmese food).
+              </p>
+            </div>
+            <div className='flex flex-col bg-slate-100 lg:flex-row'>
+              <div className='text-center relative mx-auto w-80 h-80 md:h-96 md:w-96 p-10'>
+                <h3 className='text-2xl py-1  text-teal-600 font-medium dark:text-violet-600'>Self Portraits</h3>
+                <Carousel showThumbs={false} className='p-5 max-h-100 max-w-100'>
+                  <div>
+                    <Image objectFit='cover' src={portrait1} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={portrait2} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={portrait3} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={portrait6} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={portrait7} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={portrait8} />
+                  </div>
+                </Carousel>
+              </div>
+              <div className='text-center relative mx-auto w-80 h-80 md:h-96 md:w-96 p-10'>
+                <h3 className='text-2xl py-1  text-teal-600 font-medium dark:text-violet-600'>Pixel Art</h3>
+                <Carousel showThumbs={false} className='p-5 max-h-100 max-w-100'>
+                  <div>
+                    <Image objectFit='cover' src={pixelArt1} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={pixelArt2} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={pixelArt3} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={pixelArt4} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={pixelArt5} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={pixelArt6} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={pixelArt7} />
+                  </div>
+                </Carousel>
+              </div>
+              <div className='text-center relative mx-auto w-80 h-80 md:h-96 md:w-96 p-10'>
+                <h3 className='text-2xl py-1  text-teal-600 font-medium dark:text-violet-600'>Movie Art</h3>
+                <Carousel showThumbs={false} className='p-5 max-h-100 max-w-100'>
+                  <div>
+                    <Image objectFit='cover' src={movieArt1} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={movieArt2} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={movieArt3} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={movieArt4} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={movieArt5} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={movieArt6} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={movieArt7} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={movieArt8} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={movieArt9} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={movieArt10} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={movieArt11} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={movieArt12} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={movieArt13} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={movieArt14} />
+                  </div>
+                </Carousel>
+              </div>
+            </div>
+            <div className='flex flex-col bg-slate-100 lg:flex-row'>
+              <div className='text-center relative mx-auto w-80 h-80 md:h-96 md:w-96 p-10'>
+                <h3 className='text-2xl py-1  text-teal-600 font-medium dark:text-violet-600'>Origami</h3>
+                <Carousel showThumbs={false} className='p-5 max-h-100 max-w-100'>
+                  <div>
+                    <Image objectFit='cover' src={origami1} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={origami2} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={origami3} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={origami4} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={origami5} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={origami6} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={origami7} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={origami8} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={origami9} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={origami10} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={origami11} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={origami12} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={origami13} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={origami14} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={origami15} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={origami16} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={origami17} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={origami18} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={origami19} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={origami20} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={origami21} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={origami22} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={origami23} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={origami24} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={origami25} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={origami26} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={origami27} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={origami28} />
+                  </div>
+                </Carousel>
+              </div>
+              <div className='text-center relative mx-auto w-80 h-80 md:h-96 md:w-96 p-10'>
+                <h3 className='text-2xl py-1  text-teal-600 font-medium dark:text-violet-600'>Ballpen Art</h3>
+                <Carousel showThumbs={false} className='p-5 max-h-100 max-w-100'>
+                  <div>
+                    <Image objectFit='cover' src={ballPenArt5} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={ballPenArt1} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={ballPenArt2} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={ballPenArt3} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={ballPenArt4} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={ballPenArt6} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={ballPenArt7} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={ballPenArt8} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={ballPenArt9} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={ballPenArt10} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={ballPenArt11} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={ballPenArt12} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={ballPenArt13} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={ballPenArt14} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={ballPenArt15} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={ballPenArt16} />
+                  </div>
+                </Carousel>
+              </div>
+              <div className='text-center relative mx-auto w-80 h-80 md:h-96 md:w-96 p-10'>
+                <h3 className='text-2xl py-1  text-teal-600 font-medium dark:text-violet-600'>Sketches/Stippling Art</h3>
+                <Carousel showThumbs={false} className='p-5 max-h-100 max-w-100'>
+                  <div>
+                    <Image objectFit='cover' src={stipplingArt1} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={stipplingArt2} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={stipplingArt3} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={stipplingArt4} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={stipplingArt5} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={sketch1} />
+                  </div>
+                  <div>
+                    <Image objectFit='cover' src={sketch2} />
+                  </div>
+                </Carousel>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className='text-center p-20'>
+            <h2 className='text-xl dark:text-white'>Contact:</h2>
+            <div className='flex flex-wrap mx-auto'>
+            <a className='text-xl dark:text-white px-20'  data-toggle="tooltip" title={'Copy'} onClick={() =>  {navigator.clipboard.writeText('nivas65536@gmail.com'); notify("info", "Copied")}}>Gmail: nivas65536@gmail.com</a>
+            <a className='text-xl dark:text-white px-20'  data-toggle="tooltip" title={'Copy'} onClick={() =>  {navigator.clipboard.writeText('8754698456'); notify("info", "Copied")}}>Phone No. : 8754698456</a>
+            </div>
+          </div>
+          <div className='text-center p-20'>
+            <h3 className='text-xl font-AstroSpace dark:text-white'>Thanks</h3>
+          </div>
+        </section>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   )
 }
