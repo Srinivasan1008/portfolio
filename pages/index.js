@@ -123,8 +123,8 @@ export default function Home() {
           </nav>
           <div className='text-center p-10 md:text-6xl'>
             <h2 className='text-5xl py-2 text-teal-600 font-medium dark:text-violet-600'>Srinivasan Venkatesan</h2>
-            <h3 className=' text-2xl py-2 md:text-3xl dark:text-white'>Software Developer & Digital Artist</h3>
-            <p className='text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto dark:text-violet-400'>A software developer with 2 years of experience in frontend development (ReactJS) & a budding digital artist.</p>
+            <h3 className=' text-2xl py-2 md:text-3xl dark:text-white'>{"Software Developer & Digital Artist"}</h3>
+            <p className='text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto dark:text-violet-400'>{"A software developer with 2 years of experience in frontend development (ReactJS) & a budding digital artist."}</p>
           </div>
           <div className=' text-5xl flex justify-center gap-16 py-3 text-gray-600'>
             <a href='https://www.linkedin.com/in/srinivasan-v-9a08157a/' target="_blank" rel="noopener noreferrer"><AiFillLinkedin className=' dark:fill-gray-300' /></a>
@@ -133,7 +133,7 @@ export default function Home() {
             <a href='https://www.instagram.com/srinivas_dante/' target="_blank" rel="noopener noreferrer"><FaInstagramSquare className=' dark:fill-gray-300' /></a>
           </div>
           <div className='relative mx-auto rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96'>
-            <Image src={profilePic} layout='fill' objectFit='cover' />
+            <Image alt='Image' src={profilePic} layout='fill' objectFit='cover' />
           </div>
         </section>
         <section>
@@ -141,12 +141,10 @@ export default function Home() {
             <div className='mx-auto p-10'>
               <h3 className='text-2xl py-1 text-center  text-teal-600 font-medium dark:text-violet-600'>About Me</h3>
               <p className='text-md py-5 leading-8 text-gray-800 md:text-xl dark:text-violet-400'>
-                I'm a software developer(Frontend) & been part of quality assurance team at Verizon for past 2 years. Developed various dashboards for showcasing processed test case, user stories and defect data in various formats.
-                I like to learn new upcoming technologies, have done few personal projects based on Etherium (Hyperleger) & IPFS, Socket.io.
-                And I'm bit of a enthusiast when it comes to security stuffs, have a some knowledge in tools like Metasploit, Burpsuite & basic penetesting techniques.
+                {"I'm a software developer(Frontend) & been part of quality assurance team at Verizon for past 2 years. Developed various dashboards for showcasing processed test case, user stories and defect data in various formats.I like to learn new upcoming technologies, have done few personal projects based on Etherium (Hyperleger) & IPFS, Socket.io.And I'm bit of a enthusiast when it comes to security stuffs, have a some knowledge in tools like Metasploit, Burpsuite & basic penetesting techniques."}
                 </p>
                 <p className='text-md py-5 leading-8 text-gray-800 md:text-xl dark:text-violet-400'>
-                I like to learn to draw and i do like to experiment with the approaches. I even sold a NFT in polygon blockchain. I have added some of my works below from pixel art to stippling art. I like to watch animes, movies, series and big addict to Kowsa/Atho (Burmese food).
+                {"I like to learn to draw and i do like to experiment with the approaches. I even sold a NFT in polygon blockchain. I have added some of my works below from pixel art to stippling art. I like to watch animes, movies, series and big addict to Kowsa/Atho (Burmese food)."}
               </p>
             </div>
             <div className='flex flex-col bg-slate-100 lg:flex-row'>
@@ -154,22 +152,22 @@ export default function Home() {
                 <h3 className='text-2xl py-1  text-teal-600 font-medium dark:text-violet-600'>Self Portraits</h3>
                 <Carousel showThumbs={false} className='p-5 max-h-100 max-w-100'>
                   <div>
-                    <Image objectFit='cover' src={portrait1} />
+                    <Image alt='Image' objectFit='cover' src={portrait1} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={portrait2} />
+                    <Image alt='Image' objectFit='cover' src={portrait2} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={portrait3} />
+                    <Image alt='Image' objectFit='cover' src={portrait3} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={portrait6} />
+                    <Image alt='Image' objectFit='cover' src={portrait6} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={portrait7} />
+                    <Image alt='Image' objectFit='cover' src={portrait7} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={portrait8} />
+                    <Image alt='Image' objectFit='cover' src={portrait8} />
                   </div>
                 </Carousel>
               </div>
@@ -177,25 +175,25 @@ export default function Home() {
                 <h3 className='text-2xl py-1  text-teal-600 font-medium dark:text-violet-600'>Pixel Art</h3>
                 <Carousel showThumbs={false} className='p-5 max-h-100 max-w-100'>
                   <div>
-                    <Image objectFit='cover' src={pixelArt1} />
+                    <Image alt='Image' objectFit='cover' src={pixelArt1} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={pixelArt2} />
+                    <Image alt='Image' objectFit='cover' src={pixelArt2} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={pixelArt3} />
+                    <Image alt='Image' objectFit='cover' src={pixelArt3} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={pixelArt4} />
+                    <Image alt='Image' objectFit='cover' src={pixelArt4} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={pixelArt5} />
+                    <Image alt='Image' objectFit='cover' src={pixelArt5} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={pixelArt6} />
+                    <Image alt='Image' objectFit='cover' src={pixelArt6} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={pixelArt7} />
+                    <Image alt='Image' objectFit='cover' src={pixelArt7} />
                   </div>
                 </Carousel>
               </div>
@@ -203,46 +201,46 @@ export default function Home() {
                 <h3 className='text-2xl py-1  text-teal-600 font-medium dark:text-violet-600'>Movie Art</h3>
                 <Carousel showThumbs={false} className='p-5 max-h-100 max-w-100'>
                   <div>
-                    <Image objectFit='cover' src={movieArt1} />
+                    <Image alt='Image' objectFit='cover' src={movieArt1} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={movieArt2} />
+                    <Image alt='Image' objectFit='cover' src={movieArt2} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={movieArt3} />
+                    <Image alt='Image' objectFit='cover' src={movieArt3} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={movieArt4} />
+                    <Image alt='Image' objectFit='cover' src={movieArt4} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={movieArt5} />
+                    <Image alt='Image' objectFit='cover' src={movieArt5} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={movieArt6} />
+                    <Image alt='Image' objectFit='cover' src={movieArt6} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={movieArt7} />
+                    <Image alt='Image' objectFit='cover' src={movieArt7} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={movieArt8} />
+                    <Image alt='Image' objectFit='cover' src={movieArt8} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={movieArt9} />
+                    <Image alt='Image' objectFit='cover' src={movieArt9} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={movieArt10} />
+                    <Image alt='Image' objectFit='cover' src={movieArt10} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={movieArt11} />
+                    <Image alt='Image' objectFit='cover' src={movieArt11} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={movieArt12} />
+                    <Image alt='Image' objectFit='cover' src={movieArt12} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={movieArt13} />
+                    <Image alt='Image' objectFit='cover' src={movieArt13} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={movieArt14} />
+                    <Image alt='Image' objectFit='cover' src={movieArt14} />
                   </div>
                 </Carousel>
               </div>
@@ -252,88 +250,88 @@ export default function Home() {
                 <h3 className='text-2xl py-1  text-teal-600 font-medium dark:text-violet-600'>Origami</h3>
                 <Carousel showThumbs={false} className='p-5 max-h-100 max-w-100'>
                   <div>
-                    <Image objectFit='cover' src={origami1} />
+                    <Image alt='Image' objectFit='cover' src={origami1} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={origami2} />
+                    <Image alt='Image' objectFit='cover' src={origami2} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={origami3} />
+                    <Image alt='Image' objectFit='cover' src={origami3} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={origami4} />
+                    <Image alt='Image' objectFit='cover' src={origami4} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={origami5} />
+                    <Image alt='Image' objectFit='cover' src={origami5} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={origami6} />
+                    <Image alt='Image' objectFit='cover' src={origami6} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={origami7} />
+                    <Image alt='Image' objectFit='cover' src={origami7} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={origami8} />
+                    <Image alt='Image' objectFit='cover' src={origami8} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={origami9} />
+                    <Image alt='Image' objectFit='cover' src={origami9} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={origami10} />
+                    <Image alt='Image' objectFit='cover' src={origami10} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={origami11} />
+                    <Image alt='Image' objectFit='cover' src={origami11} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={origami12} />
+                    <Image alt='Image' objectFit='cover' src={origami12} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={origami13} />
+                    <Image alt='Image' objectFit='cover' src={origami13} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={origami14} />
+                    <Image alt='Image' objectFit='cover' src={origami14} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={origami15} />
+                    <Image alt='Image' objectFit='cover' src={origami15} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={origami16} />
+                    <Image alt='Image' objectFit='cover' src={origami16} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={origami17} />
+                    <Image alt='Image' objectFit='cover' src={origami17} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={origami18} />
+                    <Image alt='Image' objectFit='cover' src={origami18} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={origami19} />
+                    <Image alt='Image' objectFit='cover' src={origami19} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={origami20} />
+                    <Image alt='Image' objectFit='cover' src={origami20} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={origami21} />
+                    <Image alt='Image' objectFit='cover' src={origami21} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={origami22} />
+                    <Image alt='Image' objectFit='cover' src={origami22} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={origami23} />
+                    <Image alt='Image' objectFit='cover' src={origami23} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={origami24} />
+                    <Image alt='Image' objectFit='cover' src={origami24} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={origami25} />
+                    <Image alt='Image' objectFit='cover' src={origami25} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={origami26} />
+                    <Image alt='Image' objectFit='cover' src={origami26} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={origami27} />
+                    <Image alt='Image' objectFit='cover' src={origami27} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={origami28} />
+                    <Image alt='Image' objectFit='cover' src={origami28} />
                   </div>
                 </Carousel>
               </div>
@@ -341,78 +339,78 @@ export default function Home() {
                 <h3 className='text-2xl py-1  text-teal-600 font-medium dark:text-violet-600'>Ballpen Art</h3>
                 <Carousel showThumbs={false} className='p-5 max-h-100 max-w-100'>
                   <div>
-                    <Image objectFit='cover' src={ballPenArt5} />
+                    <Image alt='Image' objectFit='cover' src={ballPenArt5} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={ballPenArt1} />
+                    <Image alt='Image' objectFit='cover' src={ballPenArt1} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={ballPenArt2} />
+                    <Image alt='Image' objectFit='cover' src={ballPenArt2} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={ballPenArt3} />
+                    <Image alt='Image' objectFit='cover' src={ballPenArt3} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={ballPenArt4} />
+                    <Image alt='Image' objectFit='cover' src={ballPenArt4} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={ballPenArt6} />
+                    <Image alt='Image' objectFit='cover' src={ballPenArt6} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={ballPenArt7} />
+                    <Image alt='Image' objectFit='cover' src={ballPenArt7} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={ballPenArt8} />
+                    <Image alt='Image' objectFit='cover' src={ballPenArt8} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={ballPenArt9} />
+                    <Image alt='Image' objectFit='cover' src={ballPenArt9} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={ballPenArt10} />
+                    <Image alt='Image' objectFit='cover' src={ballPenArt10} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={ballPenArt11} />
+                    <Image alt='Image' objectFit='cover' src={ballPenArt11} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={ballPenArt12} />
+                    <Image alt='Image' objectFit='cover' src={ballPenArt12} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={ballPenArt13} />
+                    <Image alt='Image' objectFit='cover' src={ballPenArt13} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={ballPenArt14} />
+                    <Image alt='Image' objectFit='cover' src={ballPenArt14} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={ballPenArt15} />
+                    <Image alt='Image' objectFit='cover' src={ballPenArt15} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={ballPenArt16} />
+                    <Image alt='Image' objectFit='cover' src={ballPenArt16} />
                   </div>
                 </Carousel>
               </div>
               <div className='text-center relative mx-auto w-80 h-80 md:h-96 md:w-96 p-10'>
-                <h3 className='text-2xl py-1  text-teal-600 font-medium dark:text-violet-600'>Sketches/Stippling Art</h3>
+                <h3 className='text-2xl py-1  text-teal-600 font-medium dark:text-violet-600'>{"Sketches/Stippling Art"}</h3>
                 <Carousel showThumbs={false} className='p-5 max-h-100 max-w-100'>
                   <div>
-                    <Image objectFit='cover' src={stipplingArt1} />
+                    <Image alt='Image' objectFit='cover' src={stipplingArt1} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={stipplingArt2} />
+                    <Image alt='Image' objectFit='cover' src={stipplingArt2} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={stipplingArt3} />
+                    <Image alt='Image' objectFit='cover' src={stipplingArt3} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={stipplingArt4} />
+                    <Image alt='Image' objectFit='cover' src={stipplingArt4} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={stipplingArt5} />
+                    <Image alt='Image' objectFit='cover' src={stipplingArt5} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={sketch1} />
+                    <Image alt='Image' objectFit='cover' src={sketch1} />
                   </div>
                   <div>
-                    <Image objectFit='cover' src={sketch2} />
+                    <Image alt='Image' objectFit='cover' src={sketch2} />
                   </div>
                 </Carousel>
               </div>
@@ -421,10 +419,10 @@ export default function Home() {
         </section>
         <section>
           <div className='text-center p-20'>
-            <h2 className='text-xl dark:text-white'>Contact:</h2>
+            <h2 className='text-xl dark:text-white'>{"Contact:"}</h2>
             <div className='flex flex-wrap mx-auto'>
-            <a className='text-xl dark:text-white px-20'  data-toggle="tooltip" title={'Copy'} onClick={() =>  {navigator.clipboard.writeText('nivas65536@gmail.com'); notify("info", "Copied")}}>Gmail: nivas65536@gmail.com</a>
-            <a className='text-xl dark:text-white px-20'  data-toggle="tooltip" title={'Copy'} onClick={() =>  {navigator.clipboard.writeText('8754698456'); notify("info", "Copied")}}>Phone No. : 8754698456</a>
+            <a className='text-xl dark:text-white px-20'  data-toggle="tooltip" title={'Copy'} onClick={() =>  {navigator.clipboard.writeText('nivas65536@gmail.com'); notify("info", "Copied")}}>{"Gmail: nivas65536@gmail.com"}</a>
+            <a className='text-xl dark:text-white px-20'  data-toggle="tooltip" title={'Copy'} onClick={() =>  {navigator.clipboard.writeText('8754698456'); notify("info", "Copied")}}>{"Phone No. : 8754698456"}</a>
             </div>
           </div>
           <div className='text-center p-20'>
