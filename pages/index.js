@@ -129,10 +129,10 @@ export default function Home() {
       <main className='px-5 md:px-20 lg:px-40 dark:bg-gray-900'>
         <section className='min-h-screen'>
           <nav className='py-10 mb-12 flex justify-between gap-4'>
-            <h1 className=' text-xl font-AstroSpace dark:text-white'>developedBySri</h1>
+            <h1 className=' text-sm font-AstroSpace dark:text-white'></h1>
             <ul className='flex items-center'>
               <li><VscColorMode onClick={() => setDarkMode(!darkMode)} className=' cursor-pointer text-2xl dark:fill-white' /></li>
-              {link != '' && <li><a className=' bg-gradient-to-r from-teal-400 to-violet-400 text-black px-4 py-2 rounded-md ml-8' href={`data:application/pdf;base64,${link}`} download={'Srinivasn_Resume.pdf'}><span className='px-2' >Resume</span><Image style={{ paddingTop: '0.5rem', minWidth: '80%', minHeight: '80%' }} alt='Image' objectFit='cover' src={download} /></a></li>}
+              {link != '' && <li><a className=' bg-gradient-to-r from-teal-400 to-violet-400 text-black px-2 py-2 rounded-md ml-8' href={`data:application/pdf;base64,${link}`} download={'Srinivasn_Resume.pdf'}><span className='px-2' >Resume</span><Image style={{ paddingTop: '0.5rem', minWidth: '80%', minHeight: '80%' }} alt='Image' objectFit='cover' src={download} /></a></li>}
             </ul>
           </nav>
           <div className='text-center p-10 md:text-6xl'>
