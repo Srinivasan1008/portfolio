@@ -1,14 +1,17 @@
 import Head from 'next/head'
 import { VscColorMode } from 'react-icons/vsc'
 import { AiFillTwitterCircle, AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
-import { FaInstagramSquare } from 'react-icons/fa'
+import { FaInstagramSquare, FaPhoneSquareAlt } from 'react-icons/fa'
 import Image from 'next/image'
 import profilePic from '../public/profilePic.png'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import React, { Component } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import toast from "../components/Toast";
+import download from '../public/download.png';
+import axios from "axios";
+import { IoMdMail } from "react-icons/io";
 
 
 import portrait1 from '../public/images/portraits/portrait1.png';
@@ -101,9 +104,20 @@ import movieArt14 from '../public/images/MovieArt/movieArt14.jpg';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
+  const [link, setLink] = useState('');
   const notify = React.useCallback((type, message) => {
     toast({ type, message });
   }, []);
+
+  useEffect(() => {
+    axios({
+      url: "https://getpantry.cloud/apiv1/pantry/ecff2e4b-9f41-4557-8fde-9543d26f788f/basket/resume",
+      method: "GET",
+    })
+      .then((res) => { setLink(res?.data?.value || '') })
+      .catch((err) => { console.log(err) });
+  }, [])
+
   return (
     <div className={darkMode ? 'dark' : ''}>
       <Head>
@@ -118,7 +132,7 @@ export default function Home() {
             <h1 className=' text-xl font-AstroSpace dark:text-white'>developedBySri</h1>
             <ul className='flex items-center'>
               <li><VscColorMode onClick={() => setDarkMode(!darkMode)} className=' cursor-pointer text-2xl dark:fill-white' /></li>
-              <li><a className=' bg-gradient-to-r from-teal-400 to-violet-400 text-black px-4 py-2 rounded-md ml-8' href='assets/Srinivasan_Resume_Offcial.pdf' download>Resume</a></li>
+              {link != '' && <li><a className=' bg-gradient-to-r from-teal-400 to-violet-400 text-black px-4 py-2 rounded-md ml-8' href={`data:application/pdf;base64,${link}`} download={'Srinivasn_Resume.pdf'}><span className='px-2' >Resume</span><Image style={{ paddingTop: '0.5rem', minWidth: '80%', minHeight: '80%' }} alt='Image' objectFit='cover' src={download} /></a></li>}
             </ul>
           </nav>
           <div className='text-center p-10 md:text-6xl'>
@@ -132,18 +146,24 @@ export default function Home() {
             <a href='https://twitter.com/Srinivas_1008' target="_blank" rel="noopener noreferrer"><AiFillTwitterCircle className=' dark:fill-gray-300' /></a>
             <a href='https://www.instagram.com/srinivas_dante/' target="_blank" rel="noopener noreferrer"><FaInstagramSquare className=' dark:fill-gray-300' /></a>
           </div>
+          <div className='flex justify-center gap-16 py-3 text-gray-600'>
+            <div className='mx-auto flex flex-wrap'>
+              <FaPhoneSquareAlt className='text-3xl text-gray-600 dark:fill-gray-300' /><a className='text-xl dark:text-white px-3  '  data-toggle="tooltip" title={'Copy'} onClick={() => { navigator.clipboard.writeText('8754698456'); notify("info", "Copied") }}>{"8754698456"}</a>
+              <IoMdMail className='text-3xl text-gray-600 dark:fill-gray-300' /><a className='text-xl dark:text-white px-3 '  data-toggle="tooltip" title={'Copy'} onClick={() => { navigator.clipboard.writeText('nivas65536@gmail.com'); notify("info", "Copied") }}>{"nivas65536@gmail.com"}</a>
+            </div>
+          </div>
           <div className='relative mx-auto rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96'>
             <Image alt='Image' src={profilePic} layout='fill' objectFit='cover' />
           </div>
         </section>
         <section>
           <div>
-            <div className='mx-auto p-10'>
+            <div className='mx-auto p-[5%] px-[20%] sm:text-sm'>
               <h3 className='text-2xl py-1 text-center  text-teal-600 font-medium dark:text-violet-600'>About Me</h3>
               <p className='text-md py-5 leading-8 text-gray-800 md:text-xl dark:text-violet-400'>
                 {"I'm a software developer(Frontend) & been part of quality assurance team at Verizon for past 2 years. Developed various dashboards for showcasing processed test case, user stories and defect data in various formats.I like to learn new upcoming technologies, have done few personal projects based on Etherium (Hyperleger) & IPFS, Socket.io.And I'm bit of a enthusiast when it comes to security stuffs, have some experience with tools like Metasploit, Burpsuite & basic pentesting techniques."}
-                </p>
-                <p className='text-md py-5 leading-8 text-gray-800 md:text-xl dark:text-violet-400'>
+              </p>
+              <p className='text-md py-5 leading-8 text-gray-800 md:text-xl  dark:text-violet-400'>
                 {"I like to draw and like to experiment with the approaches. I even sold a NFT in polygon blockchain. I have added some of my works below from pixel art to stippling art. I like to watch animes, movies, series and big addict to Kowsa/Atho (Burmese food)."}
               </p>
             </div>
@@ -418,13 +438,6 @@ export default function Home() {
           </div>
         </section>
         <section>
-          <div className='mx-auto pt-10'>
-            <div className='flex flex-wrap'>
-            <h2 className='text-xl  dark:text-white px-10'>{"Contact:"}</h2>
-            <a className='text-xl   dark:text-white px-10'  data-toggle="tooltip" title={'Copy'} onClick={() =>  {navigator.clipboard.writeText('nivas65536@gmail.com'); notify("info", "Copied")}}>{"Gmail: nivas65536@gmail.com"}</a>
-            <a className='text-xl   dark:text-white px-10'  data-toggle="tooltip" title={'Copy'} onClick={() =>  {navigator.clipboard.writeText('8754698456'); notify("info", "Copied")}}>{"Phone No. : 8754698456"}</a>
-            </div>
-          </div>
           <div className='text-center p-20'>
             <h3 className='text-xl font-AstroSpace dark:text-white'>Thanks</h3>
           </div>
