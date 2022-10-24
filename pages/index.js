@@ -146,10 +146,14 @@ export default function Home() {
             <a href='https://twitter.com/Srinivas_1008' target="_blank" rel="noopener noreferrer"><AiFillTwitterCircle className=' dark:fill-gray-300' /></a>
             <a href='https://www.instagram.com/srinivas_dante/' target="_blank" rel="noopener noreferrer"><FaInstagramSquare className=' dark:fill-gray-300' /></a>
           </div>
-          <div className='flex justify-center gap-16 py-3 text-gray-600'>
-            <div className='mx-auto flex flex-wrap'>
-              <FaPhoneSquareAlt className='text-3xl text-gray-600 dark:fill-gray-300' /><a className='text-xl dark:text-white px-3  '  data-toggle="tooltip" title={'Copy'} onClick={() => { navigator.clipboard.writeText('8754698456'); notify("info", "Copied") }}>{"8754698456"}</a>
-              <IoMdMail className='text-3xl text-gray-600 dark:fill-gray-300' /><a className='text-xl dark:text-white px-3 '  data-toggle="tooltip" title={'Copy'} onClick={() => { navigator.clipboard.writeText('nivas65536@gmail.com'); notify("info", "Copied") }}>{"nivas65536@gmail.com"}</a>
+          <div className='flex justify-center gap-16 py-3 text-gray-600 sm:text-sm'>
+            <div className='mx-auto flex flex-wrap px-10'>
+              <div className='flex justify-center'>
+              <a  className='flex justify-center text-xl dark:text-white px-3  '  data-toggle="tooltip" title={'Copy'} onClick={() => { navigator.clipboard.writeText('8754698456'); notify("info", "Copied") }}><FaPhoneSquareAlt className='text-3xl px-1 text-gray-600 dark:fill-gray-300' />8754698456</a>
+              </div>
+              <div className='flex justify-center'>
+              <a  className='flex justify-center text-xl dark:text-white px-3 '  data-toggle="tooltip" title={'Copy'} onClick={() => { navigator.clipboard.writeText('nivas65536@gmail.com'); notify("info", "Copied") }}><IoMdMail className='text-3xl px-1 text-gray-600 dark:fill-gray-300' />nivas65536@gmail.com</a>
+              </div>
             </div>
           </div>
           <div className='relative mx-auto rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96'>
