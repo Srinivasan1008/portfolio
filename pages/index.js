@@ -178,7 +178,7 @@ export default function Home() {
             <div className='text-center p-10 md:text-6xl'>
               <h2 className='text-5xl py-2 text-teal-600 font-medium dark:text-violet-600'>{data.name}</h2>
               <h3 className=' text-2xl py-2 md:text-3xl dark:text-white'>{data.role}</h3>
-              <p className='text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto dark:text-violet-400'>{data.role}</p>
+              <p className='text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto dark:text-violet-400'>{data.desc}</p>
             </div>
             <div className=' text-5xl flex justify-center gap-16 py-3 text-gray-600'>
               <a href={data.linkedin} target="_blank" rel="noopener noreferrer"><AiFillLinkedin className=' dark:fill-gray-300' /></a>
